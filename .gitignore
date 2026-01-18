@@ -1,0 +1,15 @@
+# Python environment junk
+__pycache__/
+*.pyc
+
+# Large Datasets (Keep these local)
+*.csv
+*.xlsx
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Virtual Environments
+venv/
+env/

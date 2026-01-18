@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>House Price Prediction</h2>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label>Overall Quality (1-10):</label>
+                <input type="number" name="OverallQual" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label>Living Area (sq ft):</label>
+                <input type="number" name="GrLivArea" required>
+            </div>
+            <div class="form-group">
+                <label>Garage Cars (0-4):</label>
+                <input type="number" name="GarageCars" min="0" max="4" required>
+            </div>
+            <div class="form-group">
+                <label>Total Basement SF:</label>
+                <input type="number" name="TotalBsmtSF" required>
+            </div>
+            <div class="form-group">
+                <label>Full Bathrooms:</label>
+                <input type="number" name="FullBath" min="0" max="4" required>
+            </div>
+            <div class="form-group">
+                <label>Year Built:</label>
+                <input type="number" name="YearBuilt" required>
+            </div>
+            <button type="submit" class="btn">Predict Price</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">
+                <h3>{{ prediction_text }}</h3>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

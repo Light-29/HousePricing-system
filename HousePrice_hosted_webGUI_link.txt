@@ -1,0 +1,6 @@
+1. Name: [Your Full Name]
+2. Matric Number: [Your Matric Number]
+3. Machine Learning Algorithm Used: Random Forest Regressor
+4. Model persistence method used: Joblib
+5. Live URL of the hosted application: [Paste your Streamlit/Render URL here]
+6. GitHub repository link: [Paste your GitHub Repo URL here]
